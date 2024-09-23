@@ -1,0 +1,267 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAIZAN MAQBOOL - Portfolio</title>
+    <link rel="stylesheet" href="sty.css">
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+            float: left;
+            margin: 0 15px 15px 0;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .section-divider {
+            border-top: 2px solid red;
+            margin: 40px 0;
+        }
+
+        /* Sidebar Menu */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            right: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1002;
+        }
+
+        .openbtn:hover {
+            background-color: #1013cf;
+        }
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FAIZAN MAQBOOL</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to My Portfolio</h2>
+            <div class="project">
+                <img src="profile.jpg" alt="Profile Picture of Faizan Maqbool">
+                <p>
+                    I am Faizan Maqbool, a dedicated and hardworking student with a passion for computer science. Throughout my academic journey, I have consistently achieved excellence in my studies, demonstrating a strong aptitude for problem-solving and innovative thinking. My enthusiasm for technology and programming has driven me to acquire a comprehensive skill set in web development. I am eager to apply my knowledge and skills in a professional setting, where I can contribute to dynamic projects and continue to grow as a web developer. I am looking forward to opportunities that will allow me to leverage my academic achievements and practical experience in the field of web development.
+                </p>
+            </div>
+            <div class="clear"></div>
+           
+
+        </section>
+        <div class="section-divider"></div>
+
+        <section id="education">
+            <h2>Education & Qualifications</h2>
+            <ul>
+                <li><strong>Bachelor of Science in Computer Science (BSCS)</strong>, COMSATS University Islamabad (CONTINUE), 2026</li>
+                <li><strong>Certified Web Developer</strong>, COURSERA, 2023</li>
+                <li><strong>Certified CISCO Networking Administrator</strong>, CISCO Academy, 2023</li>
+                <p></p>
+                <iframe src="FaizanMaqbool-BCS-4Acertificate.pdf" width="100%" height="600px"></iframe>
+            </ul>
+        </section>
+        <div class="section-divider"></div>
+
+        <section id="experience">
+            <h2>Experience & Field Work</h2>
+            <ul>
+                <li><strong>Freelance Web Designer</strong>, Self-employed, 2022-Present</li>
+                <li><strong>JAVA Intern</strong>, Tech Solutions Inc., 2023</li>
+                <li><strong>Volunteer</strong>, Teach for Pakistan, 2022-2023</li>
+            </ul>
+        </section>
+        <div class="section-divider"></div>
+
+        <section id="cv">
+            <h2>My CV</h2>
+            <button class="button" style="--clr: #00ad54;">
+                <span class="button-decor"></span>
+                <a href="FaizanMaqboolResume.pdf" download="FaizanMaqboolResume.pdf" class="button-content">
+                    <div class="button__icon">
+                        <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="24">
+                            <!-- SVG content -->
+                        </svg>
+                    </div>
+                    <span class="button__text">Download My CV</span>
+                </a>
+            </button>
+            
+
+
+            
+            <p></p>
+            <iframe src="FaizanMaqboolResume.pdf" width="100%" height="600px"></iframe>
+        </section>
+        <div class="section-divider"></div>
+
+        <section id="projects">
+            <h2>Created Projects</h2>
+            <div class="project">
+                <img src="tictactoe.jpg" alt="Tic Tac Toe in Python">
+                <p><strong>Tic Tac Toe in Python</strong></p>
+            </div>
+            <div class="project">
+                <img src="transport_management.jpg" alt="Transport Management System in Java">
+                <p><strong>Transport Management System in Java</strong></p>
+            </div>
+            <div class="project">
+                <img src="tennis_game.jpg" alt="Online Tennis Game Development in OOP">
+                <p><strong>Online Tennis Game Development in OOP</strong></p>
+            </div>
+            <div class="project">
+                <img src="min_distance_cost.jpg" alt="Minimum Distance Cost DSA Project on Cricket Data Set">
+                <p><strong>Minimum Distance Cost DSA Project on Cricket Data Set</strong></p>
+            </div>
+            <div class="project">
+                <img src="movies_review.jpg" alt="Movies Review Database Management System">
+                <p><strong>Movies Review Database Management System</strong></p>
+            </div>
+            <div class="project">
+                <img src="cisco_vlans.jpg" alt="CISCO Networking Project Based on VLANs">
+                <p><strong>CISCO Networking Project Based on VLANs</strong></p>
+            </div>
+        </section>
+        <div class="section-divider"></div>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <h3>For Hiring fill this form</h3>
+            <form id="contactForm">
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Faizan Maqbool. All rights reserved.</p>
+    </footer>
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="https://www.linkedin.com/in/faizanmaqbool" target="_blank">LinkedIn</a>
+        <a href="https://www.facebook.com/faizanmaqbool" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/faiz_an1212?igsh=cHR3bmltc3Q1em9s" target="_blank">Instagram</a>
+    </div>
+
+    <!-- Open Button -->
+    <button class="openbtn" onclick="openNav()"></button>
+
+    <script src="sc.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
+</html>

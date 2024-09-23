@@ -1,0 +1,369 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #24c9c7; /* Green color */
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #13968d;
+    border-radius: 4px;
+}
+
+main {
+    padding: 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Section Divider */
+.section-divider {
+    border-top: 2px solid red;
+    margin: 40px 0;
+}
+
+/* Projects Section Styles */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project p {
+    margin: 0;
+    padding: 1em;
+    background-color: #f8f8f8;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #24c9c7; /* Green color */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #24c9c7;
+    outline: none;
+    box-shadow: 0 0 4px rgba(36, 201, 199, 0.3);
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #24c9c7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+    background-color: #1ea7a5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 1em;
+    }
+
+    main {
+        padding: 1em;
+    }
+
+    #projects {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.button {
+    text-decoration: none;
+    line-height: 1;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.05);
+    background-color: #fff;
+    color: #121212;
+    border: none;
+    cursor: pointer;
+}
+
+.button-decor {
+    position: absolute;
+    inset: 0;
+    background-color: var(--clr);
+    transform: translateX(-100%);
+    transition: transform .3s;
+    z-index: 0;
+}
+
+.button-content {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.button__icon {
+    width: 48px;
+    height: 40px;
+    background-color: var(--clr);
+    display: grid;
+    place-items: center;
+}
+
+.button__text {
+    display: inline-block;
+    transition: color .2s;
+    padding: 2px 1.5rem 2px;
+    padding-left: .75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.button:hover .button__text {
+    color: #fff;
+}
+
+.button:hover .button-decor {
+    transform: translate(0);
+}
+
+/* Loader Styles */
+.loader {
+    --cell-size: 80px; /* Increased cell size */
+    --cell-spacing: 1px;
+    --cells: 3;
+    --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--total-size);
+    height: var(--total-size);
+    position: absolute;
+    top: 170px; /* Adjust this value to your desired distance from the top */
+    right: 60px; /* Adjust this value to your desired distance from the right */
+    z-index: 1001; /* Ensure it's above other content */
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+    .loader {
+        top: 50px; /* Adjust as needed for smaller screens */
+    }
+}
+
+  
+.cell {
+    flex: 0 0 var(--cell-size);
+    margin: var(--cell-spacing);
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 4px;
+    animation: 1.5s ripple ease infinite;
+}
+  
+.cell.d-1 {
+    animation-delay: 100ms;
+}
+  
+.cell.d-2 {
+    animation-delay: 200ms;
+}
+  
+.cell.d-3 {
+    animation-delay: 300ms;
+}
+  
+.cell.d-4 {
+    animation-delay: 400ms;
+}
+  
+.cell:nth-child(1) {
+    --cell-color: #00FF87;
+}
+  
+.cell:nth-child(2) {
+    --cell-color: #0CFD95;
+}
+  
+.cell:nth-child(3) {
+    --cell-color: #17FBA2;
+}
+  
+.cell:nth-child(4) {
+    --cell-color: #23F9B2;
+}
+  
+.cell:nth-child(5) {
+    --cell-color: #30F7C3;
+}
+  
+.cell:nth-child(6) {
+    --cell-color: #3DF5D4;
+}
+  
+.cell:nth-child(7) {
+    --cell-color: #45F4DE;
+}
+  
+.cell:nth-child(8) {
+    --cell-color: #53F1F0;
+}
+  
+.cell:nth-child(9) {
+    --cell-color: #60EFFF;
+}
+  
+/* Animation */
+@keyframes ripple {
+    0% {
+        background-color: transparent;
+    }
+  
+    30% {
+        background-color: var(--cell-color);
+    }
+  
+    60% {
+        background-color: transparent;
+    }
+  
+    100% {
+        background-color: transparent;
+    }
+}
+
+/* Container for Flexbox */
+#home .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Adjust the gap as needed */
+}
